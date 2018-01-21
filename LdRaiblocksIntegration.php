@@ -16,6 +16,8 @@ class LdRaiblocksIntegration extends Plugin
     {
         $this->addPayment($context->getPlugin());
         $this->addTokenAttribute();
+
+        $context->scheduleClearCache(InstallContext::CACHE_LIST_DEFAULT);
     }
 
     private function addTokenAttribute()
@@ -53,6 +55,7 @@ class LdRaiblocksIntegration extends Plugin
     public function uninstall(UninstallContext $context)
     {
         $this->setPaymentActiveFlag($context, false);
+        $context->scheduleClearCache(InstallContext::CACHE_LIST_DEFAULT);
     }
 
     /**
