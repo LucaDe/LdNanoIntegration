@@ -1,4 +1,6 @@
-#LdRaiblocksIntegration
+# LdRaiblocksIntegration
+## Description
+Shopware plugin for accepting [Raiblocks](https://raiblocks.net/) payments via [BrainBlocks](https://brainblocks.io).
 
 ## License
 
