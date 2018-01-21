@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element required="true" type="text" scope="shop">
+            <name>xrb_destination</name>
+            <label lang="de">Ihre Raiblocks Adresse</label>
+            <label lang="en">Your Raiblocks address</label>
+            <description lang="de">An diese Adresse werden die Raiblockszahlungen gesendet.</description>
+            <description lang="en">All Raiblocks transactions will be sent to this address.</description>
+        </element>
+    </elements>
+</config>
