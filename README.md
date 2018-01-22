@@ -1,4 +1,7 @@
 # LdRaiblocksIntegration
+
+This plugin is now maintained under the official [Brainblocks Github account](https://github.com/brainblocks/LdRaiblocksIntegration)
+
 ## Description
 Shopware plugin for accepting [Raiblocks](https://raiblocks.net/) payments via [BrainBlocks](https://brainblocks.io).
 
