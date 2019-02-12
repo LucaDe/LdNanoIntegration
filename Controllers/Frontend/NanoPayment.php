@@ -1,8 +1,8 @@
 <?php
 
-class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controllers_Frontend_Payment
+class Shopware_Controllers_Frontend_NanoPayment extends Shopware_Controllers_Frontend_Payment
 {
-    const RAIBLOCKS_PAYMENT_NAME = 'raiblocks_payment';
+    const NANO_PAYMENT_NAME = 'nano_payment';
     const PAYMENT_STATUS_PAID = 12;
 
     /**
@@ -11,7 +11,7 @@ class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controller
     public function preDispatch()
     {
         /** @var \Shopware\Components\Plugin $plugin */
-        $plugin = $this->get('kernel')->getPlugins()['LdRaiblocksIntegration'];
+        $plugin = $this->get('kernel')->getPlugins()['LdNanoIntegration'];
         $this->get('template')->addTemplateDir($plugin->getPath() . '/Resources/views/');
     }
 
@@ -20,7 +20,7 @@ class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controller
      */
     public function indexAction()
     {
-        if ($this->getPaymentShortName() !== self::RAIBLOCKS_PAYMENT_NAME) {
+        if ($this->getPaymentShortName() !== self::NANO_PAYMENT_NAME) {
             return $this->redirect(['controller' => 'checkout']);
         }
 
@@ -51,9 +51,9 @@ class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controller
 
         $token = $this->Request()->getParam('token');
         $xrbDestination = $this->getXrbDestination();
-        $raiblocksPaymentService = $this->get('ld_raiblocks_integration.raiblocks_payment');
+        $nanoPaymentService = $this->get('ld_nano_integration.nano_payment');
         // Verify brainblocks token via brainblocks api
-        $response = $raiblocksPaymentService->verifyPayment($basket, $token, $xrbDestination);
+        $response = $nanoPaymentService->verifyPayment($basket, $token, $xrbDestination);
 
         if (!$response) {
             return $this->redirectToConfrim();
@@ -62,7 +62,7 @@ class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controller
         $transactionId = substr($response->getToken(), 0, 254);
         // Save order with brainblocks token
         $orderNo = $this->saveOrder($transactionId, $transactionId, self::PAYMENT_STATUS_PAID);
-        $raiblocksPaymentService->saveBrainblocksToken($orderNo, $token);
+        $nanoPaymentService->saveBrainblocksToken($orderNo, $token);
         return $this->redirect(['controller' => 'checkout', 'action' => 'finish']);
     }
 
@@ -101,7 +101,7 @@ class Shopware_Controllers_Frontend_RaiblocksPayment extends Shopware_Controller
         }
 
         $config = $this->container->get('shopware.plugin.config_reader')
-            ->getByPluginName('LdRaiblocksIntegration', $shop);
+            ->getByPluginName('LdNanoIntegration', $shop);
 
         return $config['xrb_destination'];
     }

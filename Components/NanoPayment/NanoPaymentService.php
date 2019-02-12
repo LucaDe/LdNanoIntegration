@@ -1,20 +1,20 @@
 <?php
-namespace LdRaiblocksIntegration\Components\RaiblocksPayment;
+namespace LdNanoIntegration\Components\NanoPayment;
 
 use Shopware\Components\Model\ModelManager;
 use Shopware\Models\Order\Order;
 
-class RaiblocksPaymentService
+class NanoPaymentService
 {
 
-    /** @var  BrainblocksService $brainblocksService */
+    /** @var BrainblocksService $brainblocksService */
     private $brainblocksService;
 
     /** @var  ModelManager $em */
     private $em;
 
     /**
-     * RaiblocksPaymentService constructor.
+     * NanoPaymentService constructor.
      * @param BrainblocksService $brainblocksService
      * @param ModelManager $em
      */

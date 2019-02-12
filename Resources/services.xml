@@ -3,11 +3,11 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="ld_raiblocks_integration.raiblocks_payment" class="LdRaiblocksIntegration\Components\RaiblocksPayment\RaiblocksPaymentService">
-            <argument type="service" id="ld_raiblocks_integration.brainblocks_service" />
+        <service id="ld_nano_integration.nano_payment" class="LdNanoIntegration\Components\NanoPayment\nanoPaymentService">
+            <argument type="service" id="ld_nano_integration.brainblocks_service" />
             <argument type="service" id="models" />
         </service>
-        <service id="ld_raiblocks_integration.brainblocks_service" class="LdRaiblocksIntegration\Components\RaiblocksPayment\BrainblocksService">
+        <service id="ld_nano_integration.brainblocks_service" class="LdNanoIntegration\Components\NanoPayment\BrainblocksService">
             <argument type="service" id="guzzle_http_client_factory" />
         </service>
     </services>

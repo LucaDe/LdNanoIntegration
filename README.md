@@ -1,9 +1,9 @@
-# LdRaiblocksIntegration
+# LdNanoIntegration
 
-This plugin is now maintained under the official [Brainblocks Github account](https://github.com/brainblocks/LdRaiblocksIntegration)
+This plugin is now maintained under the official [Brainblocks Github account](https://github.com/brainblocks/LdNanoIntegration)
 
 ## Description
-Shopware plugin for accepting [Raiblocks](https://raiblocks.net/) payments via [BrainBlocks](https://brainblocks.io).
+Shopware plugin for accepting [Nano](https://nano.org/) payments via [BrainBlocks](https://brainblocks.io).
 
 ## Screenshots
 
@@ -12,11 +12,11 @@ Shopware plugin for accepting [Raiblocks](https://raiblocks.net/) payments via [
 
 ## Setup
 
-1. Download Plugin [here](https://github.com/LucaDe/LdRaiblocksIntegration/releases/download/1.0/LdRaiblocksIntegration.zip).
+1. Download Plugin [here](https://github.com/LucaDe/LdNanoIntegration/releases/download/1.0/LdNanoIntegration.zip).
 2. Upload the zip file via your plugin manager in your shopware installation
 3. Install and activate the plugin 
 3. Set your xrb destination address in the plugin's configuration
-4. Enable the new payment option 'Pay with Raiblocks' in the 'Payment methods' module.
+4. Enable the new payment option 'Pay with Nano' in the 'Payment methods' module.
    ![choose_payments](./payments.png)
 5. That's it! You can configure the default texts via the 'Payment methods' and 'Snippets' module. 
  

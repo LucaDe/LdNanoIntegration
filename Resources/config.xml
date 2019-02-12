@@ -4,10 +4,10 @@
     <elements>
         <element required="true" type="text" scope="shop">
             <name>xrb_destination</name>
-            <label lang="de">Ihre Raiblocks Adresse</label>
-            <label lang="en">Your Raiblocks address</label>
-            <description lang="de">An diese Adresse werden die Raiblockszahlungen gesendet.</description>
-            <description lang="en">All Raiblocks transactions will be sent to this address.</description>
+            <label lang="de">Ihre Nano Adresse</label>
+            <label lang="en">Your Nano address</label>
+            <description lang="de">An diese Adresse werden die Nanozahlungen gesendet.</description>
+            <description lang="en">All Nano transactions will be sent to this address.</description>
         </element>
     </elements>
 </config>

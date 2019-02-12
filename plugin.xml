@@ -2,12 +2,22 @@
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/plugin.xsd">
 
-    <label lang="en">Raiblocks Integration via Brainblocks</label>
-    <label lang="de">Raiblocks Integration via Brainblocks</label>
+    <label lang="en">Nano Integration via Brainblocks</label>
+    <label lang="de">Nano Integration via Brainblocks</label>
 
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <copyright>(c) Luca Demmel</copyright>
     <author>Luca Demmel</author>
+
+  <changelog version="1.1.0">
+        <changes lang="de">Aktualisierung von Raiblocks auf Nano</changes>
+        <changes lang="en">Rename Raiblocks to Nano</changes>
+    </changelog>
+
+    <changelog version="1.0.0">
+        <changes lang="de">Initiales Release</changes>
+        <changes lang="en">Initial release</changes>
+    </changelog>
 
     <compatibility minVersion="5.3"/>
 </plugin>

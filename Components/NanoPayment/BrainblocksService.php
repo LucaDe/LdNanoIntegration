@@ -1,7 +1,7 @@
 <?php
-namespace LdRaiblocksIntegration\Components\RaiblocksPayment;
+namespace LdNanoIntegration\Components\NanoPayment;
 
-use LdRaiblocksIntegration\Components\RaiblocksPayment\Response\BrainblocksResponse;
+use LdNanoIntegration\Components\NanoPayment\Response\BrainblocksResponse;
 use Shopware\Components\HttpClient\GuzzleFactory;
 
 class BrainblocksService
@@ -10,7 +10,7 @@ class BrainblocksService
     private $guzzleFactory;
 
     /**
-     * RaiblocksPaymentService constructor.
+     * NanoPaymentService constructor.
      * @param GuzzleFactory $guzzleFactory
      */
     public function __construct(GuzzleFactory $guzzleFactory)

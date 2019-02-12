@@ -1,5 +1,5 @@
 <?php
-namespace LdRaiblocksIntegration\Components\RaiblocksPayment\Response;
+namespace LdNanoIntegration\Components\NanoPayment\Response;
 
 class BrainblocksResponse
 {

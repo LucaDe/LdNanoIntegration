@@ -9,14 +9,14 @@
     <script src="https://brainblocks.io/brainblocks.min.js"></script>
     <div class="content checkout--content finish--content">
         <div class="finish--teaser panel has--border is--rounded">
-            <h2 class="panel--title teaser--title is--align-center">{s name="RaiblocksPaymentHeadline"}Pay with Raiblocks{/s}</h2>
+            <h2 class="panel--title teaser--title is--align-center">{s name="NanoPaymentHeadline"}Pay with Nano{/s}</h2>
             <div class="panel--body is--wide is--align-center">
                 <p class="teaser--text">
-                    {s name="RaiblocksPaymentDetails"}
+                    {s name="NanoPaymentDetails"}
                         Please pay now. Simply click the button below for payment details!
                     {/s}
                 </p>
-                <div id="raiblocks-button" style="display: inline-block;"></div>
+                <div id="nano-button" style="display: inline-block;"></div>
                 <p class="teaser--actions">
                     <a href="{$cancelUrl}" class="btn is--secondary teaser--btn-back is--icon-left"
                        title="{"{s name="CancelPaymentBackToConfirm"}Cancel payment{/s}"|replace:' ':'&nbsp;'}">
@@ -44,6 +44,6 @@
             window.location = '{$returnUrl}?' + params;
         }
 
-        }, '#raiblocks-button');
+        }, '#nano-button');
 {/block}
 //]]>
